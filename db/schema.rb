@@ -12,7 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2020_03_10_193710) do
 
-  create_table "reviews_tables", force: :cascade do |t|
+  create_table "reviews", force: :cascade do |t|
+    t.integer "trail_id"
+    t.integer "rating"
+    t.string "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "trails", force: :cascade do |t|
