@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_10_193710) do
+ActiveRecord::Schema.define(version: 2020_03_11_162820) do
 
   create_table "reviews", force: :cascade do |t|
     t.integer "trail_id"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2020_03_10_193710) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "avg_rating"
   end
 
 end

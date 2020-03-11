@@ -50,5 +50,12 @@ group :test do
   gem 'webdrivers'
 end
 
+group :test, :development do
+  gem 'rspec-its', require: false
+  gem 'rspec'
+  gem 'rspec-rails' # Ruby behaviour-driven developement testing tool's Rails support.
+  gem 'shoulda-matchers'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
