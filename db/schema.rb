@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_11_162820) do
+ActiveRecord::Schema.define(version: 2020_03_11_165703) do
 
   create_table "reviews", force: :cascade do |t|
     t.integer "trail_id"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2020_03_11_162820) do
     t.string "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "trails", force: :cascade do |t|
@@ -31,6 +32,16 @@ ActiveRecord::Schema.define(version: 2020_03_11_162820) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.decimal "avg_rating"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "auth_token"
+    t.string "email"
+    t.string "encrypted_password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
